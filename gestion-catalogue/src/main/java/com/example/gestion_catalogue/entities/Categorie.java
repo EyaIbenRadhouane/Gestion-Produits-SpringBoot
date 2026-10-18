@@ -21,7 +21,6 @@ public class Categorie {
     private String nom;
     //L’attribut mappedBy = "categorie" dans l’annotation @OneToMany indique à JPA que la rela-
     //tion est bidirectionnelle, mais que c’est l’entité Produit (qui possède l’attribut categorie)
-    //
     //qui est "propriétaire" de la relation en base de données. En termes SQL, cela signifie que JPA
     //va créer une clé étrangère categorie_id dans la table produits, et non une table de jointure.
     @OneToMany(mappedBy = "categorie", cascade = CascadeType.ALL, fetch = FetchType.LAZY)

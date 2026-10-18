@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Bean;
 @SpringBootApplication
 public class GestionCatalogueApplication {
 
-	@Bean
+	//@Bean
 	public CommandLineRunner commandLineRunner(
 			ProduitRepository pr,
 			CategorieRepository cr) {
