@@ -16,7 +16,7 @@ public class ServiceProduit implements IServiceProduit{
     }
 
     @Override
-    public void mettreAjourProduit(Long id, Produit p) {
+    public Produit mettreAjourProduit(Long id, Produit p) {
         Produit pp=getProduit(id);
         if(pp!=null){
             pp.setNom(p.getNom());
@@ -24,6 +24,7 @@ public class ServiceProduit implements IServiceProduit{
             pp.setQuantite(p.getQuantite());
             produitRepository.save(pp);
         }
+        return pp;
     }
 
     @Override
