@@ -30,7 +30,7 @@ public class ProduitController {
         return serviceProduit.getProduitsParMC(mc);
     }
 
-    @DeleteMapping("/id")
+    @DeleteMapping("/{id}")
     public void deleteProduct(@PathVariable Long id){
 
         serviceProduit.supprimerProduit(id);
